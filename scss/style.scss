@@ -1,0 +1,112 @@
+@import 'normalize';
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import 'mixines';
+@import 'fontello';
+
+
+$sizes: (
+    sm: 320px,
+    md: 768px,
+    // lg: 1024px
+);
+
+$font-size: calc(11px + 1vw);
+$font-regular: 400;
+$font-bold: 500;
+$font-color: #000;
+
+$color-red: #f00;
+$color-gray: #eee;
+
+
+body {
+    padding: 8px;
+    font-family: 'Jost', sans-serif;
+    font-weight: $font-regular;
+    color: $font-color;
+}
+
+.pcalendar {
+
+    font-size: $font-size;
+
+    &__header {
+        font-weight: $font-bold;
+    }
+
+    &_bold {
+        font-weight: $font-bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table,
+    td {
+        border: $color-gray 1px solid
+    }
+
+    td {
+        padding: 8px;
+
+        @include w-from(map-get($sizes, 'md')) {
+            padding: 16px;
+        }
+    }
+
+    &_today {
+        font-weight: $font-bold;
+        background-color: $color-gray;
+    }
+
+    &_not-current {
+        color: lighten($font-color, 90%);
+    }
+
+    &_holiday {
+        color: $color-red;
+    }
+
+    &__buttons {
+        padding: 8px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    button {
+        border: 0;
+        padding: 12px 16px;
+        font-weight: $font-bold;
+        background-color: $color-gray;
+
+        @include w-from(map-get($sizes, 'md')) {
+            padding: 16px 24px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $color-red;
+        }
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &[disabled] {
+            color: lighten($font-color, 50%);
+        }
+
+        &[disabled]:hover {
+            cursor: initial
+        }
+    }
+}
+
+figure.icon {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}

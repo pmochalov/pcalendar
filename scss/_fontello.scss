@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?19796661');
+  src: url('../font/fontello.woff2?19796661') format('woff2'),
+    url('../font/fontello.woff?19796661') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+
+.icon-left-open:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-right-open:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-th-large:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-calendar-empty:before {
+  content: '\f133';
+}
+
+/* '' */
