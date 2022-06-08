@@ -58,7 +58,7 @@ Pcalendar.prototype.showMonth = function (year, month) {
         if (day == 1 && dayOfWeek !== 1) {
             let lastDays = lastDayOfLastMonth - firstDayOfMonth + 2;
             for (let i = lastDays; i <= lastDayOfLastMonth; i++) {
-                rows += this.createTd(i, { class: 'pcalendar_not-current', day: dayOfWeek }).outerHTML;
+                rows += this.createTd(i, { class: 'pcalendar_not-current' }).outerHTML;
             }
         }
 
