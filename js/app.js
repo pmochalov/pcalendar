@@ -205,5 +205,5 @@ Pcalendar.prototype.isCurrentMonth = function () {
 
 
 
-let cal = new Pcalendar('.cal_1');
+let cal = new Pcalendar('#calendar_1');
 
